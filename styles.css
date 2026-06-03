@@ -483,19 +483,30 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-color: rgba(52, 211, 153, 0.3);
 }
 .value-card:hover::before { transform: scaleX(1); }
-.value-card__icon {
-  width: 56px; height: 56px;
-  border-radius: var(--radius-md);
-  background: var(--grad-brand-soft);
-  display: flex; align-items: center; justify-content: center;
-  color: var(--c-blue);
+/* Unified hexagonal brand icon system */
+.hex-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px; height: 64px;
   margin-bottom: 20px;
-  transition: transform var(--t-base) var(--ease);
+  transition: transform var(--t-base) var(--ease), filter var(--t-base) var(--ease);
+  flex-shrink: 0;
 }
-.value-card:hover .value-card__icon {
-  transform: scale(1.08) rotate(-6deg);
-  color: var(--c-green);
+.hex-icon svg { width: 100%; height: 100%; display: block; }
+.hex-icon--lg { width: 72px; height: 72px; }
+.hex-icon--sm { width: 36px; height: 36px; margin-bottom: 0; }
+
+.value-card:hover .hex-icon,
+.service-card:hover .hex-icon {
+  transform: scale(1.06) rotate(-4deg);
+  filter: drop-shadow(0 8px 18px rgba(52, 211, 153, 0.28));
 }
+
+/* Small inline icons */
+.ic-sm { width: 18px; height: 18px; display: inline-block; }
+.ic-badge { width: 22px; height: 22px; display: inline-block; }
+.float-badge .ic-badge { color: #34D399; }
 .value-card h3 { font-size: 19px; margin-bottom: 10px; }
 .value-card p { color: var(--c-text-soft); font-size: 15px; }
 
@@ -534,19 +545,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   border-color: rgba(52, 211, 153, 0.4);
 }
 .service-card:hover::after { opacity: 1; }
-.service-card__icon {
-  width: 64px; height: 64px;
-  border-radius: var(--radius-md);
-  background: var(--grad-brand);
-  display: flex; align-items: center; justify-content: center;
-  color: #fff;
-  margin-bottom: 24px;
-  box-shadow: 0 10px 24px rgba(16, 185, 129, 0.25);
-  transition: transform var(--t-base) var(--ease);
-}
-.service-card:hover .service-card__icon {
-  transform: scale(1.05) rotate(-4deg);
-}
+.service-card .hex-icon { margin-bottom: 24px; }
 .service-card h3 { font-size: 21px; margin-bottom: 12px; }
 .service-card > p {
   color: var(--c-text-soft);
@@ -694,13 +693,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .cta__contact {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   color: rgba(255, 255, 255, 0.9);
   font-size: 15px;
   transition: color var(--t-fast) var(--ease), transform var(--t-fast) var(--ease);
 }
 .cta__contact:hover { color: var(--c-green-light); transform: translateX(4px); }
-.cta__contact svg { color: var(--c-green-light); }
+.cta__contact .hex-icon {
+  filter: drop-shadow(0 4px 10px rgba(52, 211, 153, 0.35));
+  transition: transform var(--t-base) var(--ease);
+}
+.cta__contact:hover .hex-icon { transform: scale(1.1) rotate(-6deg); }
 
 .cta__form {
   position: relative;

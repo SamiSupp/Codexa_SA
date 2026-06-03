@@ -4,16 +4,19 @@
       <stop offset="0%" stop-color="#0D1B3D"/>
       <stop offset="100%" stop-color="#1E3A8A"/>
     </linearGradient>
-    <linearGradient id="hg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#1E3A8A"/>
-      <stop offset="100%" stop-color="#34D399"/>
+    <linearGradient id="hg" x1="10%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA"/>
+      <stop offset="80%" stop-color="#34D399"/>
     </linearGradient>
   </defs>
   <rect width="200" height="200" rx="44" fill="url(#bg)"/>
   <polygon points="100,28 168,64 168,136 100,172 32,136 32,64"
            stroke="url(#hg)" stroke-width="8" fill="none" stroke-linejoin="round"/>
-  <path d="M128 70 C128 60, 116 56, 102 56 C86 56, 74 64, 74 78
-           C74 92, 88 96, 100 102 C112 108, 126 112, 126 126
-           C126 140, 114 148, 98 148 C84 148, 72 142, 72 132"
-        stroke="#34D399" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <path d="M128 72 C128 62, 118 58, 102 58 C86 58, 76 66, 76 80
+           C76 92, 88 96, 100 100 C112 104, 124 110, 124 124
+           C124 138, 114 144, 98 144 C84 144, 74 138, 74 130"
+        stroke="#E5E7EB" stroke-width="10" stroke-linecap="round" fill="none"/>
+  <line x1="100" y1="100" x2="100" y2="72" stroke="#E5E7EB" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="100" cy="68" r="6" fill="#34D399"/>
+  <circle cx="74" cy="130" r="6" fill="#34D399"/>
 </svg>
