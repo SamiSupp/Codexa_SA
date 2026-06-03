@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Codexa_SA Systems — Desarrollo de software a la medida. Tecnología, innovación y confianza para construir el futuro." />
+  <title>Codexa_SA Systems — Desarrollo de Software</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Decorative wave background -->
+  <svg class="bg-wave" viewBox="0 0 1440 600" preserveAspectRatio="none" aria-hidden="true">
+    <defs>
+      <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="#1E3A8A" stop-opacity="0.4"/>
+        <stop offset="100%" stop-color="#10B981" stop-opacity="0.4"/>
+      </linearGradient>
+    </defs>
+    <path d="M0,300 C320,200 520,400 720,300 C920,200 1120,400 1440,300 L1440,600 L0,600 Z"
+          fill="url(#waveGrad)"/>
+    <g class="wave-dots">
+      <circle cx="180" cy="270" r="4" fill="#34D399"/>
+      <circle cx="420" cy="350" r="4" fill="#10B981"/>
+      <circle cx="700" cy="290" r="4" fill="#34D399"/>
+      <circle cx="980" cy="330" r="4" fill="#10B981"/>
+      <circle cx="1260" cy="290" r="4" fill="#34D399"/>
+    </g>
+  </svg>
+
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__brand" aria-label="Codexa_SA Systems">
+        <img src="assets/logo.svg" alt="" class="nav__logo" />
+        <span class="nav__name">Codexa<span class="nav__name-underscore">_</span>SA <span class="nav__name-sub">Systems</span></span>
+      </a>
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#tecnologias">Tecnologías</a>
+        <a href="#valores">Valores</a>
+        <a href="#contacto" class="nav__cta">Conversemos</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <div class="hero__copy reveal">
+        <span class="hero__chip">
+          <span class="dot"></span> Moderna · Confiable · Innovadora
+        </span>
+        <h1 class="hero__title">
+          Soluciones de software<br/>
+          <span class="grad-text">a la medida de tu negocio.</span>
+        </h1>
+        <p class="hero__lead">
+          En <strong>Codexa_SA Systems</strong> diseñamos, desarrollamos y escalamos
+          productos digitales que transforman ideas en plataformas confiables,
+          elegantes y listas para crecer.
+        </p>
+        <div class="hero__actions">
+          <a href="#contacto" class="btn btn--primary">
+            Iniciar un proyecto
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#servicios" class="btn btn--ghost">Conocer servicios</a>
+        </div>
+
+        <ul class="hero__stats" aria-label="Indicadores clave">
+          <li><strong data-count="60">0</strong><span>Proyectos entregados</span></li>
+          <li><strong data-count="25">0</strong><span>Clientes activos</span></li>
+          <li><strong data-count="99">0</strong><span>% Tiempo activo</span></li>
+        </ul>
+      </div>
+
+      <div class="hero__visual reveal" aria-hidden="true">
+        <div class="glass-card hero__card">
+          <div class="glass-card__bar">
+            <span></span><span></span><span></span>
+          </div>
+          <div class="glass-card__body">
+            <div class="code-line"><span class="kw">const</span> <span class="var">codexa</span> = <span class="kw">new</span> <span class="cls">Studio</span>({</div>
+            <div class="code-line indent">mission: <span class="str">'construir el futuro'</span>,</div>
+            <div class="code-line indent">stack: [<span class="str">'web'</span>, <span class="str">'cloud'</span>, <span class="str">'mobile'</span>],</div>
+            <div class="code-line indent">values: [<span class="str">'innovación'</span>, <span class="str">'confianza'</span>]</div>
+            <div class="code-line">});</div>
+            <div class="code-line"><span class="cmt">// listo para escalar contigo</span></div>
+            <div class="code-line"><span class="var">codexa</span>.<span class="fn">build</span>(<span class="str">'tu idea'</span>);<span class="cursor">|</span></div>
+          </div>
+        </div>
+
+        <div class="float-badge float-badge--1">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 6l-6 6 6 6M16 6l6 6-6 6" stroke="#34D399" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Código limpio</span>
+        </div>
+        <div class="float-badge float-badge--2">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path d="M12 2l3 6 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z" stroke="#34D399" stroke-width="2" fill="none" stroke-linejoin="round"/></svg>
+          <span>Calidad premium</span>
+        </div>
+
+        <div class="hex-orbit">
+          <svg viewBox="0 0 220 220" width="220" height="220">
+            <polygon points="110,15 195,62 195,158 110,205 25,158 25,62"
+                     stroke="rgba(52,211,153,0.35)" stroke-width="1.5" fill="none"/>
+            <polygon points="110,35 175,72 175,148 110,185 45,148 45,72"
+                     stroke="rgba(30,58,138,0.4)" stroke-width="1" fill="none"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALORES -->
+  <section class="values" id="valores">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Nuestros valores</span>
+        <h2>Tecnología, <span class="grad-text">innovación</span> y <span class="grad-text-blue">confianza</span> para construir el futuro.</h2>
+      </div>
+
+      <div class="values__grid">
+        <article class="value-card reveal">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+              <path d="M9 18l-6-6 6-6M15 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Innovación</h3>
+          <p>Adoptamos nuevas tecnologías con criterio: cada decisión técnica responde a un problema real de tu negocio.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+              <path d="M12 2l8 4v6c0 5-3.5 9-8 10-4.5-1-8-5-8-10V6l8-4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Confianza</h3>
+          <p>Trabajamos como una extensión de tu equipo, con comunicación clara, plazos cumplidos y total transparencia.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Compromiso</h3>
+          <p>Acompañamos cada proyecto desde la idea hasta el despliegue, y seguimos contigo después del lanzamiento.</p>
+        </article>
+
+        <article class="value-card reveal">
+          <div class="value-card__icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none">
+              <path d="M3 12l4 4 14-14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Calidad</h3>
+          <p>Código probado, escalable y documentado. Construimos para que tu producto crezca sin fricción.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="services" id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Servicios</span>
+        <h2>Desarrollo de software <span class="grad-text">end-to-end</span></h2>
+        <p class="section-lead">
+          Cubrimos todo el ciclo de vida del producto digital: desde la primera línea de
+          código hasta la operación en producción.
+        </p>
+      </div>
+
+      <div class="services__grid">
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <path d="M8 6l-6 6 6 6M16 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Desarrollo Web</h3>
+          <p>Plataformas web modernas, rápidas y escalables. Frontends elegantes con React, Vue o Next.js y backends robustos.</p>
+          <ul class="service-card__list">
+            <li>Aplicaciones SPA y SSR</li>
+            <li>APIs REST y GraphQL</li>
+            <li>Dashboards administrativos</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <rect x="6" y="2" width="12" height="20" rx="3" stroke="currentColor" stroke-width="2"/>
+              <path d="M11 18h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Aplicaciones Móviles</h3>
+          <p>Apps nativas y multiplataforma con experiencias fluidas, integradas con tu infraestructura y listas para escalar.</p>
+          <ul class="service-card__list">
+            <li>iOS, Android, React Native</li>
+            <li>Integraciones con APIs</li>
+            <li>Notificaciones y analytics</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <path d="M18 10h-1.26A8 8 0 109 20h9a5 5 0 000-10z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Cloud & DevOps</h3>
+          <p>Arquitecturas cloud-native, CI/CD, contenedores y observabilidad. Tu producto operando sin sobresaltos 24/7.</p>
+          <ul class="service-card__list">
+            <li>AWS, GCP, Azure</li>
+            <li>Docker · Kubernetes</li>
+            <li>Pipelines CI/CD</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M3 9h18M7 14h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Software a Medida</h3>
+          <p>ERPs, CRMs y herramientas internas diseñadas exactamente para los procesos de tu organización.</p>
+          <ul class="service-card__list">
+            <li>Análisis funcional</li>
+            <li>Automatización de flujos</li>
+            <li>Integraciones empresariales</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <rect x="3" y="11" width="18" height="10" rx="2" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h3>Ciberseguridad</h3>
+          <p>Auditorías, hardening y buenas prácticas de seguridad integradas desde el diseño hasta el despliegue.</p>
+          <ul class="service-card__list">
+            <li>Auditoría OWASP</li>
+            <li>Gestión de identidad</li>
+            <li>Cifrado y backups</li>
+          </ul>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-card__icon">
+            <svg viewBox="0 0 24 24" width="32" height="32" fill="none">
+              <path d="M3 3h7v7H3zM14 3h7v7h-7zM3 14h7v7H3zM14 14h7v7h-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Consultoría Tech</h3>
+          <p>Arquitectura, code review, performance y estrategia tecnológica para llevar tu producto al siguiente nivel.</p>
+          <ul class="service-card__list">
+            <li>Arquitectura de software</li>
+            <li>Auditorías de código</li>
+            <li>Roadmaps técnicos</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESO -->
+  <section class="process" id="proceso">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Un proceso <span class="grad-text">claro y predecible</span></h2>
+        <p class="section-lead">
+          Aplicamos metodologías ágiles con entregables visibles en cada etapa. Sabes
+          exactamente en qué estamos y por qué.
+        </p>
+      </div>
+
+      <ol class="process__steps">
+        <li class="process__step reveal">
+          <div class="process__num">01</div>
+          <h3>Descubrimiento</h3>
+          <p>Entendemos tu negocio, usuarios y objetivos. Definimos alcance, riesgos y métricas de éxito.</p>
+        </li>
+        <li class="process__step reveal">
+          <div class="process__num">02</div>
+          <h3>Diseño & Arquitectura</h3>
+          <p>Diseñamos la experiencia y la arquitectura técnica que soportará el crecimiento del producto.</p>
+        </li>
+        <li class="process__step reveal">
+          <div class="process__num">03</div>
+          <h3>Desarrollo Iterativo</h3>
+          <p>Sprints quincenales con demos, pruebas continuas y feedback constante. Sin sorpresas al final.</p>
+        </li>
+        <li class="process__step reveal">
+          <div class="process__num">04</div>
+          <h3>Despliegue & Soporte</h3>
+          <p>Lanzamos a producción y acompañamos con monitoreo, mejoras y mantenimiento evolutivo.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- TECNOLOGIAS -->
+  <section class="tech" id="tecnologias">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Stack tecnológico</span>
+        <h2>Tecnologías <span class="grad-text">probadas y modernas</span></h2>
+        <p class="section-lead">
+          Elegimos las herramientas correctas para cada problema. Sin modas, con criterio.
+        </p>
+      </div>
+
+      <div class="tech__grid">
+        <div class="tech__group reveal">
+          <h4>Frontend</h4>
+          <div class="tech__chips">
+            <span class="chip">React</span>
+            <span class="chip">Next.js</span>
+            <span class="chip">Vue</span>
+            <span class="chip">TypeScript</span>
+            <span class="chip">Tailwind</span>
+          </div>
+        </div>
+        <div class="tech__group reveal">
+          <h4>Backend</h4>
+          <div class="tech__chips">
+            <span class="chip">Node.js</span>
+            <span class="chip">Python</span>
+            <span class="chip">.NET</span>
+            <span class="chip">PostgreSQL</span>
+            <span class="chip">MongoDB</span>
+          </div>
+        </div>
+        <div class="tech__group reveal">
+          <h4>Mobile</h4>
+          <div class="tech__chips">
+            <span class="chip">React Native</span>
+            <span class="chip">Swift</span>
+            <span class="chip">Kotlin</span>
+            <span class="chip">Flutter</span>
+          </div>
+        </div>
+        <div class="tech__group reveal">
+          <h4>Cloud / DevOps</h4>
+          <div class="tech__chips">
+            <span class="chip">AWS</span>
+            <span class="chip">GCP</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Kubernetes</span>
+            <span class="chip">GitHub Actions</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA CONTACTO -->
+  <section class="cta" id="contacto">
+    <div class="container">
+      <div class="cta__card reveal">
+        <div class="cta__copy">
+          <span class="eyebrow">Conversemos</span>
+          <h2>¿Listo para construir<br/>el siguiente <span class="grad-text">gran producto</span>?</h2>
+          <p>Cuéntanos tu idea o el reto que estás enfrentando. Te respondemos en menos de 24 horas hábiles.</p>
+
+          <div class="cta__contact-list">
+            <a href="mailto:hola@codexasa.com" class="cta__contact">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="2"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              hola@codexasa.com
+            </a>
+            <a href="tel:+5400000000" class="cta__contact">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none"><path d="M5 4h4l2 5-3 2a12 12 0 005 5l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              +54 11 1234 5678
+            </a>
+          </div>
+        </div>
+
+        <form class="cta__form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label>
+              <span>Nombre</span>
+              <input type="text" name="nombre" required autocomplete="name" />
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required autocomplete="email" />
+            </label>
+          </div>
+          <label>
+            <span>¿En qué podemos ayudarte?</span>
+            <textarea name="mensaje" rows="4" required></textarea>
+          </label>
+          <button type="submit" class="btn btn--primary btn--full">
+            Enviar mensaje
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="assets/logo.svg" alt="" class="footer__logo" />
+        <div>
+          <strong>Codexa_SA Systems</strong>
+          <span>Desarrollo de Software</span>
+        </div>
+      </div>
+      <p class="footer__tag">
+        Tecnología, <span class="grad-text">innovación</span> y <span class="grad-text-blue">confianza</span> para construir el futuro.
+      </p>
+      <p class="footer__copy">© <span id="year"></span> Codexa_SA Systems. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

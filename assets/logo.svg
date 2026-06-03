@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <defs>
+    <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3A8A"/>
+      <stop offset="60%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <linearGradient id="sGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#1E3A8A"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Hexagon outline -->
+  <polygon points="100,12 178,56 178,144 100,188 22,144 22,56"
+           stroke="url(#hexGrad)" stroke-width="9" stroke-linejoin="round" fill="none"/>
+
+  <!-- Stylized S with nodes -->
+  <path d="M132 64
+           C132 52, 118 46, 102 46
+           C84 46, 70 56, 70 72
+           C70 88, 86 94, 100 100
+           C114 106, 130 112, 130 128
+           C130 144, 116 154, 98 154
+           C82 154, 68 148, 68 136"
+        stroke="url(#sGrad)" stroke-width="11" stroke-linecap="round" fill="none"/>
+
+  <!-- Circuit dots -->
+  <circle cx="132" cy="64" r="6" fill="#34D399"/>
+  <circle cx="68" cy="136" r="6" fill="#1E3A8A"/>
+  <circle cx="100" cy="100" r="5" fill="#10B981"/>
+</svg>
